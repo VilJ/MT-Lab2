@@ -16,6 +16,14 @@
       var rotation = xRot+" "+yRot+" "+zRot;
       document.getElementsByTagName("a-pointcloud")[0].setAttribute("rotation", rotation);
     }
+      function slide() {
+      var params = document.getElementsByTagName("a-pointcloud")[0].getAttribute("position");
+      var xPos = Number(params.x)+ 0.5;
+      var yPos = Number(params.y) ;
+      var zPos = Number(params.z);
+      var position = xPos+" "+yPos+" "+zPos;
+      document.getElementsByTagName("a-pointcloud")[0].setAttribute("position", position);
+    }
 
       
   </script>
@@ -69,6 +77,13 @@
   </a-gui-button>
 
   
+  <a-gui-button 
+    width="2.5" height="0.75"
+    onclick="slide()" key-code="32"
+    value="Stumti"
+    font-family="Arial"
+    margin="0 0 0 0"
+  >
   </a-gui-button>
 
 </a-gui-flex-container>
