@@ -24,7 +24,14 @@
       var position = xPos+" "+yPos+" "+zPos;
       document.getElementsByTagName("a-pointcloud")[0].setAttribute("position", position);
     }
-
+      function BIG() {
+      var params = document.getElementsByTagName("a-pointcloud")[0].getAttribute("scale");
+      var xScal = Number(params.x) * 1.1;
+      var yScal = Number(params.y) * 1.1;
+      var zScal = Number(params.z) * 1.1;
+      var scaling = xScal+" "+yScal+" "+zScal;
+      document.getElementsByTagName("a-pointcloud")[0].setAttribute("scale", scaling);
+    }
       
   </script>
 
@@ -86,6 +93,14 @@
   >
   </a-gui-button>
 
+      <a-gui-button 
+    width="2.5" height="0.75"
+    onclick="BIG()" key-code="32"
+    value="Padidinti"
+    font-family="Arial"
+    margin="0 0 0 0"
+  >
+      
 </a-gui-flex-container>
     </a-entity>
     </a-scene>
